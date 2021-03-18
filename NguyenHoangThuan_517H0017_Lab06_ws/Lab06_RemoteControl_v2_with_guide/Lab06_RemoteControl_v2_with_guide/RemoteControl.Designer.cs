@@ -43,16 +43,23 @@ namespace Lab06_RemoteControl
             this.btnTV = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnOFF3 = new System.Windows.Forms.Button();
+            this.btnON3 = new System.Windows.Forms.Button();
+            this.cboSlot3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnOFF4 = new System.Windows.Forms.Button();
+            this.btnON4 = new System.Windows.Forms.Button();
+            this.cboSlot4 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,6 +191,12 @@ namespace Lab06_RemoteControl
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label4);
@@ -206,39 +219,30 @@ namespace Lab06_RemoteControl
             this.label5.TabIndex = 4;
             this.label5.Text = "Door";
             // 
-            // pictureBox1
+            // btnOFF3
             // 
-            this.pictureBox1.Image = global::Lab06_RemoteControl.Properties.Resources.close;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.btnOFF3.Location = new System.Drawing.Point(201, 86);
+            this.btnOFF3.Name = "btnOFF3";
+            this.btnOFF3.Size = new System.Drawing.Size(37, 23);
+            this.btnOFF3.TabIndex = 12;
+            this.btnOFF3.Text = "OFF";
+            this.btnOFF3.UseVisualStyleBackColor = true;
+            this.btnOFF3.Click += new System.EventHandler(this.btnOFF3_Click);
             // 
-            // button1
+            // btnON3
             // 
-            this.button1.Location = new System.Drawing.Point(201, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "OFF";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnON3.Location = new System.Drawing.Point(163, 86);
+            this.btnON3.Name = "btnON3";
+            this.btnON3.Size = new System.Drawing.Size(32, 23);
+            this.btnON3.TabIndex = 11;
+            this.btnON3.Text = "ON";
+            this.btnON3.UseVisualStyleBackColor = true;
+            this.btnON3.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // cboSlot3
             // 
-            this.button2.Location = new System.Drawing.Point(163, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "ON";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboSlot3.FormattingEnabled = true;
+            this.cboSlot3.Items.AddRange(new object[] {
             "None",
             "Light",
             "TV",
@@ -246,10 +250,11 @@ namespace Lab06_RemoteControl
             "Pc",
             "Speaker",
             "Air Conditioner"});
-            this.comboBox1.Location = new System.Drawing.Point(61, 88);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 21);
-            this.comboBox1.TabIndex = 10;
+            this.cboSlot3.Location = new System.Drawing.Point(61, 88);
+            this.cboSlot3.Name = "cboSlot3";
+            this.cboSlot3.Size = new System.Drawing.Size(87, 21);
+            this.cboSlot3.TabIndex = 10;
+            this.cboSlot3.SelectedIndexChanged += new System.EventHandler(this.cboSlot3_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -260,28 +265,30 @@ namespace Lab06_RemoteControl
             this.label6.TabIndex = 9;
             this.label6.Text = "Slot 03";
             // 
-            // button3
+            // btnOFF4
             // 
-            this.button3.Location = new System.Drawing.Point(201, 125);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "OFF";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnOFF4.Location = new System.Drawing.Point(201, 125);
+            this.btnOFF4.Name = "btnOFF4";
+            this.btnOFF4.Size = new System.Drawing.Size(37, 23);
+            this.btnOFF4.TabIndex = 16;
+            this.btnOFF4.Text = "OFF";
+            this.btnOFF4.UseVisualStyleBackColor = true;
+            this.btnOFF4.Click += new System.EventHandler(this.btnOFF4_Click);
             // 
-            // button4
+            // btnON4
             // 
-            this.button4.Location = new System.Drawing.Point(163, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 23);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "ON";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnON4.Location = new System.Drawing.Point(163, 125);
+            this.btnON4.Name = "btnON4";
+            this.btnON4.Size = new System.Drawing.Size(32, 23);
+            this.btnON4.TabIndex = 15;
+            this.btnON4.Text = "ON";
+            this.btnON4.UseVisualStyleBackColor = true;
+            this.btnON4.Click += new System.EventHandler(this.btnON4_Click);
             // 
-            // comboBox2
+            // cboSlot4
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cboSlot4.FormattingEnabled = true;
+            this.cboSlot4.Items.AddRange(new object[] {
             "None",
             "Light",
             "TV",
@@ -289,10 +296,11 @@ namespace Lab06_RemoteControl
             "Pc",
             "Speaker",
             "Air Conditioner"});
-            this.comboBox2.Location = new System.Drawing.Point(61, 127);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(87, 21);
-            this.comboBox2.TabIndex = 14;
+            this.cboSlot4.Location = new System.Drawing.Point(61, 127);
+            this.cboSlot4.Name = "cboSlot4";
+            this.cboSlot4.Size = new System.Drawing.Size(87, 21);
+            this.cboSlot4.TabIndex = 14;
+            this.cboSlot4.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -303,18 +311,83 @@ namespace Lab06_RemoteControl
             this.label7.TabIndex = 13;
             this.label7.Text = "Slot 04";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(193, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 13);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Pc";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Lab06_RemoteControl.Properties.Resources.off_pc;
+            this.pictureBox2.Location = new System.Drawing.Point(186, 41);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(85, 103);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lab06_RemoteControl.Properties.Resources.close;
+            this.pictureBox1.Location = new System.Drawing.Point(105, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(17, 91);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(28, 20);
+            this.textBox1.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Speaker";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 114);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Air Conditioner";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Air Conditioner";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // RemoteControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 389);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.btnOFF4);
+            this.Controls.Add(this.btnON4);
+            this.Controls.Add(this.cboSlot4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnOFF3);
+            this.Controls.Add(this.btnON3);
+            this.Controls.Add(this.cboSlot3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOFF2);
@@ -330,6 +403,7 @@ namespace Lab06_RemoteControl
             this.Text = "Remote Control";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -353,14 +427,20 @@ namespace Lab06_RemoteControl
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnOFF3;
+        private System.Windows.Forms.Button btnON3;
+        private System.Windows.Forms.ComboBox cboSlot3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnOFF4;
+        private System.Windows.Forms.Button btnON4;
+        private System.Windows.Forms.ComboBox cboSlot4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

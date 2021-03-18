@@ -133,10 +133,62 @@ namespace Lab06_RemoteControl
                 Off = NoCommand.GetInstance();
                 On = NoCommand.GetInstance();
             }
+            else if (device.Equals("Pc"))
+            {
+                Off = _DoorOff;
+                On = _DoorOn;
+            }
+            else if (device.Equals("Speaker"))
+            {
+                Off = _DoorOff;
+                On = _DoorOn;
+            }
+            else if (device.Equals("Air Conditioner"))
+            {
+                Off = _DoorOff;
+                On = _DoorOn;
+            }
             //TODO
+        }
+        #region Slot 3
+        
+        private void cboSlot3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void btnOFF3_Click(object sender, EventArgs e)
+        {
+            
+        }
+        #endregion
+
+        #region Slot 4
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOFF4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnON4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
